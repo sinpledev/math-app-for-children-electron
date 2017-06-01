@@ -1,17 +1,17 @@
-<div style="margin: 50px;">
-    <div class="btn-group" style="margin-bottom: 20px; text-align: center;">
+<div class="row">
+    <div class="col-sm-6 text-left">
         <button type="button" class="btn btn-primary" ng-click="reset('+')">덧셈</button>
         <button type="button" class="btn btn-primary" ng-click="reset('−')">뺄셈</button>
         <button type="button" class="btn btn-primary" ng-click="reset('×')">곱셈</button>
         <button type="button" class="btn btn-primary" ng-click="reset('÷')">나눗셈</button>
     </div>
+    <div class="col-sm-6 text-right">
+        <button type="button" class="btn btn-success" ng-click="marking()" ng-disabled="!showMarkingBtnFlag">확인</button>
+        <button type="button" class="btn btn-success" ng-click="reset(operator)" ng-disabled="showMarkingBtnFlag">새 문제</button>
+    </div>
+</div>
+<div class="row">
     <div ng-repeat="number in numberArray">
         <div plus-questions></div>
     </div>
-    <button type="button" class="btn btn-success" ng-click="marking()" ng-show="showMarkingBtnFlag">확인</button>
-    <button type="button" class="btn btn-success" ng-click="reset(operator)" ng-show="!showMarkingBtnFlag">새 문제</button>
-</div>
-<div class="row">
-    <div class="col-sm-6"></div>
-
 </div>
