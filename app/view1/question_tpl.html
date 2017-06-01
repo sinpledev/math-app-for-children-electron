@@ -1,0 +1,13 @@
+<div class="col-sm-6 form-group">
+    <div class="row">
+        <div class="col-sm-2" ng-show="showAlertFlag">
+            <span class="glyphicon" ng-class="{'glyphicon-ok-circle': (answer === number.correct), 'glyphicon-remove-circle': (answer !== number.correct)}"></span>
+        </div>
+        <div class="col-sm-5" ng-class="{'col-sm-offset-2': !showAlertFlag}">
+            <h2 style="display: inline">{{ number.num1 }} {{operator}} {{ number.num2 }} = </h2>
+        </div>
+        <div class="col-sm-5">
+            <input class="form-control input-lg" id="inputlg" type="number" ng-model="answer" style="display: inline;">
+        </div>
+    </div>
+</div>
