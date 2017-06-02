@@ -1,15 +1,21 @@
-<div style="margin: 50px;">
+<div style="margin: 20px;">
 
-    <ul class="nav nav-pills nav-justified" style="margin: auto; margin-bottom: 40px; width: 100%; border: 1px solid #337ab7;">
-        <li role="presentation" ng-click="reset('+', 'tab1')" ng-class="{active : isTab1}"><a class="tabFont" href="javascript:void(0);">PLUS ( + )</a></li>
-        <li role="presentation" ng-click="reset('-', 'tab2')" ng-class="{active : isTab2}" ><a class="tabFont" href="javascript:void(0);">MINUS ( - )</a></li>
-        <li role="presentation" ng-click="reset('×', 'tab3')" ng-class="{active : isTab3}"><a class="tabFont" href="javascript:void(0);">MULTIPLY ( × )</a></li>
-        <li role="presentation" ng-click="reset('÷', 'tab4')" ng-class="{active : isTab4}"><a class="tabFont" href="javascript:void(0);">DIVISION ( ÷ )</a></li>
-    </ul>
+    <div class="row">
+        <div class="col-sm-10">
+            <ul class="nav nav-pills nav-justified" style="margin: auto; margin-bottom: 40px; width: 100%; border: 1px solid #337ab7;">
+                <li role="presentation" ng-click="reset('+', 'tab1')" ng-class="{active : isTab1}"><a class="tabFont" href="javascript:void(0);">PLUS ( + )</a></li>
+                <li role="presentation" ng-click="reset('-', 'tab2')" ng-class="{active : isTab2}" ><a class="tabFont" href="javascript:void(0);">MINUS ( - )</a></li>
+                <li role="presentation" ng-click="reset('×', 'tab3')" ng-class="{active : isTab3}"><a class="tabFont" href="javascript:void(0);">MULTIPLY ( × )</a></li>
+                <li role="presentation" ng-click="reset('÷', 'tab4')" ng-class="{active : isTab4}"><a class="tabFont" href="javascript:void(0);">DIVISION ( ÷ )</a></li>
+            </ul>
+        </div>
+        <div class="col-sm-2">
+            <button type="button" class="btn btn-default" ng-click="toggleSetting()" style="float: right;">
+                <span class="glyphicon glyphicon-cog" aria-hidden="true"></span> Setting
+            </button>
+        </div>
+    </div>
 
-    <button type="button" class="btn btn-default" ng-click="toggleSetting()" style="float: right;">
-        <span class="glyphicon glyphicon-cog" aria-hidden="true"></span> Setting
-    </button>
     <p style="clear: both;"></p>
 
     <div class="alert alert-info" role="alert" ng-show="showSetting">
