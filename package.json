@@ -6,7 +6,9 @@
   "scripts": {
     "start": "electron .",
     "dist": "build",
-    "dist-win32": "build --win --ia32"
+    "dist-dir": "build --dir",
+    "dist-win32": "build --win --ia32",
+    "dist-mac": "build --mac"
   },
   "build": {
     "appId": "math-app-for-children",
@@ -23,9 +25,8 @@
   "author": "GitHub",
   "license": "CC0-1.0",
   "devDependencies": {
-    "electron": "^1.4.1"
-  },
-  "dependencies": {
-    "bower": "^1.8.0"
+    "electron": "^1.4.1",
+    "bower": "^1.8.0",
+    "electron-builder": "^18.3.5"
   }
 }
