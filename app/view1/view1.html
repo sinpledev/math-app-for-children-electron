@@ -1,17 +1,32 @@
-<div class="well row">
-    <div class="col-sm-6 text-left">
-        <button type="button" class="btn btn-primary" ng-click="reset('+')">덧셈</button>
-        <button type="button" class="btn btn-primary" ng-click="reset('−')">뺄셈</button>
-        <button type="button" class="btn btn-primary" ng-click="reset('×')">곱셈</button>
-        <button type="button" class="btn btn-primary" ng-click="reset('÷')">나눗셈</button>
+<div style="margin: 50px;">
+
+    <ul class="nav nav-pills nav-justified" style="margin: auto; margin-bottom: 40px; width: 100%; border: 1px solid #337ab7;">
+        <li role="presentation" ng-click="reset('+', 'tab1')" ng-class="{active : isTab1}"><a class="tabFont" href="javascript:void(0);">PLUS ( + )</a></li>
+        <li role="presentation" ng-click="reset('-', 'tab2')" ng-class="{active : isTab2}" ><a class="tabFont" href="javascript:void(0);">MINUS ( - )</a></li>
+        <li role="presentation" ng-click="reset('×', 'tab3')" ng-class="{active : isTab3}"><a class="tabFont" href="javascript:void(0);">MULTIPLY ( × )</a></li>
+        <li role="presentation" ng-click="reset('÷', 'tab4')" ng-class="{active : isTab4}"><a class="tabFont" href="javascript:void(0);">DIVISION ( ÷ )</a></li>
+    </ul>
+
+    <button type="button" class="btn btn-default" ng-click="toggleSetting()" style="float: right;">
+        <span class="glyphicon glyphicon-cog" aria-hidden="true"></span> Setting
+    </button>
+    <p style="clear: both;"></p>
+
+    <div class="alert alert-info" role="alert" ng-show="showSetting">
+        <h5 class="inline">1.첫번째 수 자릿수 : </h5>
+        <select class="inline" ng-model="num1" ng-options="num.text for num in numOptions"></select>
+
+        <h5 class="inline" style="margin-left: 20px;">2.두번째 수 자릿수 : </h5>
+        <select class="inline" ng-model="num2" ng-options="num.text for num in numOptions"></select>
+
+        <button type="button" class="btn btn-default btn-xs" ng-click="reset(operator)" style="margin-left: 20px;">apply</button>
     </div>
-    <div class="col-sm-6 text-right">
-        <button type="button" class="btn btn-success" ng-click="marking()" ng-disabled="!showMarkingBtnFlag">확인</button>
-        <button type="button" class="btn btn-success" ng-click="reset(operator)" ng-disabled="showMarkingBtnFlag">새 문제</button>
+
+    <div ng-repeat="number in numberArray" style="text-align: center; margin-top: 40px;">
+        <div print-questions></div>
     </div>
-</div>
-<div class="well row">
-    <div ng-repeat="number in numberArray">
-        <div plus-questions></div>
+    <div class="btnDiv" style="text-align: center">
+        <button type="button" class="btn btn-success btn-lg" ng-click="marking()" ng-show="showMarkingBtnFlag">CHECK</button>
+        <button type="button" class="btn btn-info btn-lg" ng-click="reset(operator)" ng-show="!showMarkingBtnFlag">NEW</button>
     </div>
 </div>

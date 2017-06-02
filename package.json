@@ -6,7 +6,7 @@
   "scripts": {
     "start": "electron .",
     "dist": "build",
-    "dist-win": "npm run dist && build --win --x64"
+    "dist-win32": "build --win --ia32"
   },
   "build": {
     "appId": "math-app-for-children",
