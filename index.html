@@ -2,23 +2,30 @@
 <html ng-app="myApp">
   <head>
     <meta charset="UTF-8">
-    <title>Hello World!</title>
+    <title>Math App For Children</title>
+    <!-- css: lib -->
     <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/normalize.css">
     <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/main.css">
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+    <!-- css: app -->
     <link rel="stylesheet" href="app/app.css">
   </head>
   <body>
     <div class="container">
-      <div ng-view></div>
+      <h1>Math App For Children</h1>
+      <!-- content -->
+      <div class="well well-lg">
+        <div ng-view></div>
+      </div>
     </div>
-
+    <!-- js: lib -->
     <script src="bower_components/angular/angular.js"></script>
     <script src="bower_components/angular-route/angular-route.js"></script>
     <script src="bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
     <script src="app/components/version/version.js"></script>
     <script src="app/components/version/version-directive.js"></script>
     <script src="app/components/version/interpolate-filter.js"></script>
+    <!-- js: app -->
     <script src="app/app.js"></script>
     <script src="app/math.js"></script>
     <script src="app/view1/view1.js"></script>
